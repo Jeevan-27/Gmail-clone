@@ -1,0 +1,74 @@
+:root {
+  --bg-color: white;
+  --border-color: #e0e0e0;
+  --text-color: #333;
+  --secondary-text-color: #666;
+  --divider-color: #e0e0e0;
+  --logout-color: #2EB086;
+  --logout-hover-color: #2EB097;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme {
+  --bg-color: #333;
+  --border-color: #555;
+  --text-color: #fff;
+  --secondary-text-color: #ccc;
+  --divider-color: #555;
+  --logout-color: #2EB086;
+  --logout-hover-color: #2EB097;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+.user-info {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  display: none;
+  z-index: 10;
+  color: var(--text-color);
+}
+
+.user-info.visible {
+  display: block;
+}
+
+.user-info__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-info__username {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.user-info__email {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
+}
+
+.user-info__divider {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--divider-color);
+  margin: 10px 0;
+}
+
+.user-info__logout {
+  color: var(--logout-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.user-info__logout:hover {
+  color: var(--logout-hover-color);
+}
