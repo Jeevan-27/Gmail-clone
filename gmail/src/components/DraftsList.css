@@ -1,0 +1,36 @@
+.drafts-list-container {
+    padding: 20px;
+}
+
+.draft-item {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.draft-item:hover {
+    background-color: #f0f0f0;
+}
+
+.draft-tray {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.draft-tray-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
