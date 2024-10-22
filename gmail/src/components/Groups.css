@@ -1,0 +1,250 @@
+/* Container for the groups list */
+.groups-container {
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  overflow: hidden;
+  min-height: 85.5vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.groups-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between; /* Ensure spacing between items */
+  flex-grow: 1;
+  position: relative;
+  left: 20px;
+}
+
+/* Group item styling */
+.groups-item {
+  background: #f9f9f9;
+  padding: 20px;
+  flex: 0 0 calc(25% - 20px); /* Four items per row on large screens */
+  margin-bottom: 0px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 375px;
+  height: 185px; /* Fixed height to make items uniform */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out content vertically */
+  margin-left: 35px;
+  margin-top: 5px;
+  margin-right: 15px;
+}
+
+/* Group item content */
+.groups-item-name {
+  font-size: 17px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-top: 0px;
+  display: flex-start;
+  align-items: center;
+  
+}
+
+.groups-item-admin,
+.groups-item-members,
+.groups-item-description {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Floating add group button */
+.groups-floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color:#2EB086;;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.groups-floating-btn:hover {
+  background-color: #2EB086;;
+  transform: translateY(-2px);
+}
+
+/* Pagination */
+.pagination {
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  max-width: 100%;
+  left: 405px;
+}
+
+.pagination-btn {
+  background-color: #f0f0f0;
+  padding: 8px 12px;
+  border: none;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.pagination-btn.active {
+  background-color: #2EB086;;
+  color: #fff;
+}
+
+/* Form for adding groups */
+.groups-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.groups-add-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  width: 90%;
+}
+
+.groups-add-form h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+.groups-add-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: bold;
+}
+
+.groups-add-form input,
+.groups-add-form textarea {
+  width: 95%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.groups-add-form input:focus,
+.groups-add-form textarea:focus {
+  border-color: #2EB086;;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.groups-error {
+  color: #f44336;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.groups-form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.groups-create-btn,
+.groups-cancel-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.groups-create-btn {
+  background-color:#2EB086;;
+  color: white;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.groups-create-btn:hover:not(:disabled) {
+  background-color: #2EB086;
+  transform: translateY(-2px);
+}
+
+.groups-create-btn:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.groups-cancel-btn {
+  background-color: #f44336;
+  color: white;
+  position: relative;
+  left: 209px;
+}
+
+.groups-cancel-btn:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
+}
+
+/* Dark theme styles */
+.groups-container.dark {
+  color: #fff;
+  background-color: black;
+}
+
+.groups-container.dark .groups-item {
+  background-color: black;
+  color: white;
+}
+
+.groups-item.dark{
+  background-color: #333;
+  color: #fff;
+}
+
+.groups-container.dark .groups-add-form {
+  background-color: #555;
+}
+
+/* Icon styling */
+.icon {
+  margin-right: 8px;
+}
+
+.delete-icon{
+  position: relative;
+  left: 5px;
+  top: 2px;
+}

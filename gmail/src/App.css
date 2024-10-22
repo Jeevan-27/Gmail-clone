@@ -1,0 +1,32 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app__body {
+  display: flex;
+  flex: 1;
+  width: 100vw;
+}
+
+.app {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.header {
+  background-color: #f1f3f4;
+  border-bottom: 1px solid #ccc;
+}
+
+.sidebar {
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+}
+
+/* Dark Theme */
+.dark-theme {
+  background-color: #121212; 
+  color: #ffffff;
+}
